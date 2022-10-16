@@ -1,5 +1,5 @@
 shift = input("shift for chipher: ")
-text = input("what text you want to encrypt: ")
+text = input("which text do you want to encrypt: ")
 
 
 def chipher(shift, text):
@@ -7,6 +7,7 @@ def chipher(shift, text):
     text_list = list(text)  
     shift_list = int(shift)
     num = len(text)
+    
     for i in range(num):
         elem = text_list[i]            # elem   это буква из введеного текста 
         index = alphabet.index(elem)   # index  это индекс элемента из алфавита 
@@ -14,7 +15,6 @@ def chipher(shift, text):
             text_list[i] = alphabet[index + shift_list]
           
             a = text_list
-            
             
         else:
             text_list[i] = alphabet[(index + shift_list) - 27]
